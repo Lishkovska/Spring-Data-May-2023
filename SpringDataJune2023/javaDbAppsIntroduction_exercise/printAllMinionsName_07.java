@@ -10,7 +10,7 @@ public class printAllMinionsName_07 {
 
         Properties props = new Properties();
         props.setProperty("user", "root");
-        props.setProperty("password", "Maria201118");
+        props.setProperty("password", "");
 
         Connection connection = DriverManager
                 .getConnection("jdbc:mysql://localhost:3306/minions_db", props);
