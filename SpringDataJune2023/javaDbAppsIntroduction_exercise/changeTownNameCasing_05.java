@@ -14,7 +14,7 @@ public class changeTownNameCasing_05 {
         Scanner scanner = new Scanner(System.in);
         Properties props = new Properties();
         props.setProperty("user", "root");
-        props.setProperty("password", "****");
+        props.setProperty("password", "");
 
         Connection connection = DriverManager
                 .getConnection("jdbc:mysql://localhost:3306/minions_db", props);
