@@ -20,7 +20,7 @@ public class addMinion_04 {
         Scanner scanner = new Scanner(System.in);
         Properties props = new Properties();
         props.setProperty("user", "root");
-        props.setProperty("password", "****");
+        props.setProperty("password", "");
 
         Connection connection = DriverManager
                 .getConnection("jdbc:mysql://localhost:3306/minions_db", props);
@@ -53,7 +53,7 @@ public class addMinion_04 {
         insertMinionsVillains.setInt(2, villainId);
         insertMinionsVillains.executeUpdate();
 
-        System.out.printf("Successfully added %s to be minion of %s\n", minionName, villainName);
+        System.out.printf("Successfully added %s to be minion of %s ", minionName, villainName);
         connection.close();
     }
 
@@ -73,7 +73,7 @@ public class addMinion_04 {
             ResultSet newVillainSet = selectVillain.executeQuery();
             newVillainSet.next();
             villainId = newVillainSet.getInt("id");
-            System.out.printf("Villain %s was added to the database.\n", villainName);
+            System.out.printf("Villain %s was added to the database. %n ", villainName);
         } else {
             villainId = villainSet.getInt("id");
 
